@@ -1,21 +1,3 @@
-## 1.9.3
-
-### Changed
-- Update dependencies
-- Update model-viewer to 4.0.0
-
-
-## 1.9.2
-
-### Changed
--Add explicit data URI compatibility and fix said compatibility for mobile
-
-
-## 1.9.1
-
-### Changed
-- Update dependencies(remove `webview_flutter_android` and `webview_flutter_wkwebview`)
-
 ## 1.9.0
 
 ### Changed

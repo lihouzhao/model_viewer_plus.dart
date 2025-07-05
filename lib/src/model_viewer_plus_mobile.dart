@@ -1,4 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
 import 'dart:async';
 import 'dart:convert' show utf8;
 import 'dart:io' show File, HttpServer, HttpStatus, InternetAddress, Platform;
@@ -57,15 +56,9 @@ class ModelViewerState extends State<ModelViewer> {
   }
 
   String _buildHTML(String htmlTemplate) {
-    String src;
-    if (widget.src.startsWith('data:')) {
-      src = widget.src;
-    } else {
-      src = '/model';
-    }
     return HTMLBuilder.build(
       htmlTemplate: htmlTemplate,
-      src: src,
+      src: '/model',
       alt: widget.alt,
       poster: widget.poster,
       loading: widget.loading,
@@ -176,8 +169,7 @@ class ModelViewerState extends State<ModelViewer> {
             // );
 
             final String fileURL;
-            if (['http', 'https', 'data']
-                .contains(Uri.parse(widget.src).scheme)) {
+            if (['http', 'https'].contains(Uri.parse(widget.src).scheme)) {
               fileURL = widget.src;
             } else {
               fileURL = p.joinAll([_proxyURL, 'model']);
