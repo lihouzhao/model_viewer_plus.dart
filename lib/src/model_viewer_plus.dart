@@ -35,6 +35,7 @@ class ModelViewer extends StatefulWidget {
   const ModelViewer({
     required this.src,
     this.backgroundColor = Colors.transparent,
+    this.progressBarColor = Colors.transparent,
     this.alt,
     this.poster,
     this.loading,
@@ -515,6 +516,10 @@ class ModelViewer extends StatefulWidget {
   /// The backgroundColor of the [ModelViewer]'s WebView.
   /// Defaults to [Colors.transparent].
   final Color backgroundColor;
+
+  /// The progressBarColor of the [ModelViewer]'s WebView.
+  /// Defaults to [Colors.transparent].
+  final Color progressBarColor;
 
   // Augmented Related CSS
 
